@@ -1,0 +1,222 @@
+/* unified legal styles for Punto Sec */
+:root {
+    --primary-bg: #0A1128; /* Inheriting from Punto Sec dark aesthetic */
+    --accent-gold: #C9A063; /* Required golden color */
+    --accent-gold-hover: #D4AF37;
+    --text-main: #FDFBF7;
+    --text-muted: #A0AAB2;
+    
+    /* Using Inter as standard sans-serif */
+    --font-heading: 'Inter', sans-serif; 
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.legal-page {
+    font-family: var(--font-body);
+    font-size: 15px; /* Required font size */
+    line-height: 1.6; /* Required line height */
+    color: var(--text-main);
+    background-color: var(--primary-bg);
+}
+
+/* Header Simplificado */
+.legal-header {
+    background: rgba(10, 11, 24, 0.95);
+    border-bottom: 1px solid rgba(201, 160, 99, 0.1);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-return {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px; /* Default small radius for modern feel */
+    transition: all 0.3s ease;
+}
+
+.btn-return:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-bg);
+}
+
+/* Contenedor Principal Centrado */
+.legal-container {
+    max-width: 800px; /* Required max-width */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Tipografía de Texto Legal */
+.legal-container h1 {
+    font-size: 2.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(201, 160, 99, 0.2);
+    padding-bottom: 1rem;
+}
+
+.legal-container h2 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-container p {
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+}
+
+.legal-container strong {
+    color: var(--text-main);
+}
+
+.legal-container ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    list-style-type: none; /* Custom list style */
+}
+
+.legal-container li {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Custom list bullet matching the aesthetic */
+.legal-container li::before {
+    content: "•";
+    color: var(--accent-gold);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.legal-container a {
+    color: var(--accent-gold);
+    text-decoration: underline;
+    text-decoration-color: rgba(201, 160, 99, 0.4);
+    text-underline-offset: 4px;
+    transition: all 0.2s ease;
+}
+
+.legal-container a:hover {
+    text-decoration-color: var(--accent-gold);
+}
+
+/* Placeholder para completar manualmente */
+.manual-fill {
+    color: var(--accent-gold);
+    background-color: rgba(201, 160, 99, 0.1);
+    padding: 0 4px;
+    border-radius: 2px;
+}
+
+/* Footer Replicado */
+.legal-footer {
+    border-top: 1px solid rgba(201, 160, 99, 0.1);
+    padding: 3rem 0;
+    margin-top: 2rem;
+    background-color: rgba(10, 11, 24, 0.5);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-info h3 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+}
+
+.footer-copy p {
+    font-size: 0.85rem;
+    color: rgba(160, 170, 178, 0.5); /* extra muted for copy */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-container {
+        padding: 40px 20px;
+    }
+    
+    .legal-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
